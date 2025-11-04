@@ -1,3 +1,4 @@
+
 .main-body{
     width: 100%;
     min-height: 100vh;
@@ -47,10 +48,25 @@
     /* border: 1px solid #0000001f; */
     margin-top: 10px;
     list-style: none;
+    padding-left: 35px;
     /* background: #0504040c; */
     border-radius: 6px;
     cursor: pointer;
     font-size: 17px;
     user-select: none;
+    position: relative;
     
+}
+.listUn li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("/static/image/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
