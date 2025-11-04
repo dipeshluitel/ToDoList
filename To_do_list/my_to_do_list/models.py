@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class To_do_list(models.Model):
@@ -7,4 +8,6 @@ class To_do_list(models.Model):
 
     def __str__(self):
         return self.listed
-    
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
