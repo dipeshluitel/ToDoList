@@ -28,5 +28,15 @@ This project demonstrates core Django concepts such as models, views, templates,
 
 ---
 
-## 📂 Project Structure
+
+---
+
+## ⚙️ Installation & Setup
+
+Follow these steps to run the project locally 👇
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/dipeshluitel/ToDoList.git
+cd ToDoList/To_do_list
 
