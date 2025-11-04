@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import TaskForm
 from .models import To_do_list
 
@@ -20,3 +20,9 @@ def todo_list(request):
             return redirect('active')
     
     return render(request, 'active.html', {'tasks':tasks, 'form':form})
+
+def toggle_task(request, task_id):
+    task = get_object_or_404(To_do_list, id=task_id)
+    task.completed = not task.completed
+    task.save()
+    return redirect('active')
