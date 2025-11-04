@@ -17,7 +17,9 @@
         <div class="task-list">
             <ul class="listUn">
                 {%for task in tasks%}
-                <li class="checked">{{task.listed}}</li>
+                <li class="{%if task.completed %} checked {%endif%}">
+                <a style="text-decoration: none; color: black;" href="{%url 'toggle_task' task.id%}">{{task.listed}}</a>
+                </li>
                 {%empty%}
                 <li>No Tasks Yet!</li>
                 {%endfor%}
