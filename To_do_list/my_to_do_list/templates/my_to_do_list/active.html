@@ -1,7 +1,10 @@
 {% extends 'base.html' %} 
-{% block tile %} Active {%endblock%}
+{% load static %}
+{% block title %} Active {%endblock%}
 {%block body_block%}
     <div class="main-body">
-
+        <div class="todo-app">
+            <h2 >To-Do List <img class="todo-logo" src="{%static 'image/todo-logo.png'%}" alt=""></h2>
+        </div>
     </div>
 {%endblock%}
