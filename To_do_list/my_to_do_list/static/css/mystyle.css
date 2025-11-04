@@ -32,9 +32,25 @@
     gap: 10px;
 }
 
-.task-form input {
-    flex: 1;                  /* Makes input stretch to take remaining space */
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+.taskform button{
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    padding: 6px 18px ;
+    background:  #FF8040 ;
+}
+.listUn{
+    margin-top: 20px;
+}
+.listUn li{
+    padding: 2.5px;
+    /* border: 1px solid #0000001f; */
+    margin-top: 10px;
+    list-style: none;
+    /* background: #0504040c; */
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    user-select: none;
+    
 }
