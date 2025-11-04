@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import TaskForm
+from .models import To_do_list
 
 # Create your views here.
 def active(request):
@@ -6,3 +8,15 @@ def active(request):
 
 def save(request):
     return render(request,'save.html')
+
+def todo_list(request):
+    tasks = To_do_list.objects.all()
+    form = TaskForm()
+
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('active')
+    
+    return render(request, 'active.html', {'tasks':tasks, 'form':form})

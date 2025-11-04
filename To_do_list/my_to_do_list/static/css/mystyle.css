@@ -24,3 +24,17 @@
     max-width: 40px;
     margin-left: 10px;
 }
+
+.taskform{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.task-form input {
+    flex: 1;                  /* Makes input stretch to take remaining space */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}

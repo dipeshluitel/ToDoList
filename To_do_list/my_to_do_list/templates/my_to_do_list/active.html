@@ -5,6 +5,24 @@
     <div class="main-body">
         <div class="todo-app">
             <h2 >To-Do List <img class="todo-logo" src="{%static 'image/todo-logo.png'%}" alt=""></h2>
+        
+
+        <div class="row">
+            <form method="post" class="taskform">
+                {% csrf_token %}
+                {{form.listed}}
+                <button class="btn btn-primary">Add</button>
+            </form>
+        </div>
+        <div class="task-list">
+            <ul>
+                {%for task in tasks%}
+                <li>{{task.listed}}</li>
+                {%empty%}
+                <li>No Tasks Yet!</li>
+                {%endfor%}
+            </ul>
+        </div>
         </div>
     </div>
 {%endblock%}
