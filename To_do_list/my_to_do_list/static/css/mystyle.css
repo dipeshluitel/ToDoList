@@ -84,3 +84,11 @@ a img{
     max-width: 40px;
     margin-left: 20px;
 }
+
+.list-group{
+    user-select: none;
+    cursor: pointer;
+}
+.list-group li{
+    margin-top: 10px;
+}
