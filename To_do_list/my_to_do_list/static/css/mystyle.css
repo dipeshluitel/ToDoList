@@ -70,3 +70,12 @@
     left: 0;
     transform: translateY(-50%);
 }
+.listUn li.checked{
+    color: #050404;
+    text-decoration: line-through;
+}
+.listUn li.checked::before{
+    color: #050404;
+    text-decoration: line-through;
+    background-image: url("/static/image/check.png");
+}
