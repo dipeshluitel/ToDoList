@@ -21,7 +21,7 @@
     align-items: center;
 }
 
-.todo-logo{
+.todo-logo {
     max-width: 40px;
     margin-left: 10px;
 }
@@ -78,4 +78,9 @@
     color: #050404;
     text-decoration: line-through;
     background-image: url("/static/image/check.png");
+}
+
+a img{
+    max-width: 40px;
+    margin-left: 20px;
 }

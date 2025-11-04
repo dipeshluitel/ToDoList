@@ -18,7 +18,8 @@
             <ul class="listUn">
                 {%for task in tasks%}
                 <li class="{%if task.completed %} checked {%endif%}">
-                <a style="text-decoration: none; color: black;" href="{%url 'toggle_task' task.id%}">{{task.listed}}</a>
+                <a style="text-decoration: none; color: black;" href="{%url 'toggle_task' task.id%}">{{task.listed}}</a> 
+                <a href="{%url 'delete_task' task.id%}"><img src="{%static 'image/delete.png'%}" alt=""></a>
                 </li>
                 {%empty%}
                 <li>No Tasks Yet!</li>

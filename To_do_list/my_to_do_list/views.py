@@ -7,7 +7,7 @@ def active(request):
     return render(request,'active.html')
 
 def save(request):
-    return render(request,'save.html')
+    return render(request,'info.html')
 
 def todo_list(request):
     tasks = To_do_list.objects.all()
@@ -25,4 +25,10 @@ def toggle_task(request, task_id):
     task = get_object_or_404(To_do_list, id=task_id)
     task.completed = not task.completed
     task.save()
+    return redirect('active')
+
+def delete_task(request,task_id):
+    task=get_object_or_404(To_do_list,id=task_id)
+    task.save()
+    task.delete()
     return redirect('active')
