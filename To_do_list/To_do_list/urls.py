@@ -21,4 +21,5 @@ from django.conf.urls import include
 urlpatterns = [
     path('',include('my_to_do_list.urls')),
     path('admin/', admin.site.urls),
+    path('accounts/',include('django.contrib.auth.urls')),
 ]

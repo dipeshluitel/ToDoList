@@ -92,3 +92,6 @@ a img{
 .list-group li{
     margin-top: 10px;
 }
+.helptext{
+    display: none;
+}

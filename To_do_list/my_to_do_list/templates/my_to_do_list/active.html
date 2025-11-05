@@ -4,14 +4,15 @@
 {%block body_block%}
     <div class="main-body">
         <div class="todo-app">
-            <h2 >To-Do List <img class="todo-logo" src="{%static 'image/todo-logo.png'%}" alt=""></h2>
+            <h2 >To-Do List <img class="todo-logo" src="{%static 'image/todo-logo.png'%}" alt=""> 
+                <div class="lead">({{request.user.username}})</div></h2>
         
 
         <div class="row">
             <form method="post" class="taskform">
                 {% csrf_token %}
                 {{form.listed}}
-                <button class="btn btn-primary">Add</button>
+                <button type="submit" class="btn btn-primary">Add</button>
             </form>
         </div>
         <div class="task-list">
